@@ -34,6 +34,19 @@
         {{ user.location }}
       </div>
     {% endif %}
+
+    <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+      <!-- <i class="material-icons">school</i>  -->
+      {% octicon book height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Book %}
+      University of Illinois at Chicago
+    </div>    
+
+    <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+      <!-- <i class="material-icons">school</i>  -->
+      {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Email %}
+      jpate218@uic.edu
+    </div>        
+
     {% if site.social_media %}
       <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
         {% for account in site.social_media %}
